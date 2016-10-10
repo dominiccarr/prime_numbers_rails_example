@@ -8,7 +8,7 @@ class PrimesController < ApplicationController
 		@result = @p1.is_prime?(@input1.to_i)
 	end
 	
-	# /primes?upper=1000&lower=10
+	# /bounds?upper=1000&lower=10
     def bounds
         upper = params[:upper].to_i
         lower = params[:lower].to_i
