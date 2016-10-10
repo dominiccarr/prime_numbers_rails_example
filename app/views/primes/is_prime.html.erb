@@ -1,0 +1,22 @@
+<h1>Prime Number Result</h1><br>
+
+You entered <%= @input1 %><br>
+
+
+<% string = "" %>
+<% if @result %>
+    <% string = "#{@input1} is a Prime Number!" %>
+<% else %>
+    <% string = "#{@input1} is not a Prime!" %>
+    <% if (@input1.to_i % 2) == 0 %>
+        <%= "There are no even primes silly!" %><br/>
+    <% end %>
+<% end %>
+
+<%= string %>
+<br/>
+<% if @result %>
+    <% (2..(@input1.to_i-1)).each do |i| %>
+        <%= "#{@input1} / #{i} = #{@input1.to_i/i} remainder #{@input1.to_i % i} " %><br/>
+    <% end %>
+<% end %>
