@@ -1,6 +1,8 @@
 <h1>Enter a number to check if it is Prime?</h1>
 <%= form_tag("/validate", method: "post") do %>
  <%= label_tag(:q, "Search for:") %>
+ <br/>
  <%= text_field_tag(:q) %>
+ <br/>
  <%= submit_tag("Search") %>
 <% end %>

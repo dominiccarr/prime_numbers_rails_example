@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   
   root 'primes#checkprime'
   
-  get '/bounds' => 'primes#bounds'
-   
+  #root :controller=>'primes', action => 'checkprime'
+
   post '/validate', :controller=>'primes', :action=>'is_prime'
+  
+  get '/bounds' => 'primes#bounds'
   
 end
